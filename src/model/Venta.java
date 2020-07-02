@@ -1,11 +1,14 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.time.LocalDate;
 import java.util.List;
 
+import funciones.Funciones;
+
 public class Venta {
-	private String fecha;
+	private Date fecha;
 	private String nroTicket;
 	private FormaPago formaPago;
 	private double totalVenta;
@@ -15,7 +18,7 @@ public class Venta {
 	private Sucursal sucursal;
 	private List<ItemVenta> items;
 
-	public Venta(String fecha, String nroTicket, FormaPago formaPago, Usuario vendedor, Usuario cobrador,
+	public Venta(Date fecha, String nroTicket, FormaPago formaPago, Usuario vendedor, Usuario cobrador,
 			Usuario cliente, Sucursal sucursal) {
 		this.fecha = fecha;
 		this.nroTicket = nroTicket;
@@ -28,11 +31,11 @@ public class Venta {
 		this.items = new ArrayList<ItemVenta>();
 	}
 
-	public String getFecha() {
+	public Date getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(String fecha) {
+	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 
@@ -102,7 +105,7 @@ public class Venta {
 	}
 
 	public String toString() {
-		return "Venta [fecha=" + fecha + ", nroTicket=" + nroTicket + ", formaPago=" + formaPago + ", totalVenta="
+		return "Venta [fecha=" + Funciones.cambiarFormato(fecha) + ", nroTicket=" + nroTicket + ", formaPago=" + formaPago + ", totalVenta="
 				+ totalVenta + ", vendedor=" + vendedor + ", cobrador=" + cobrador + ", cliente=" 
 				+ cliente + ", sucursal=" + sucursal + "]";
 	}

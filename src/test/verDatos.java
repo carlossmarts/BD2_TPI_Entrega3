@@ -1,9 +1,11 @@
 package test;
 
+import java.util.Date;
+
 import dao.*;
 import model.*;
 
-public class verDatosCargados {
+public class verDatos {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -57,14 +59,20 @@ public class verDatosCargados {
 		for(Sucursal s : Sdao.traerSucursales()) {
 			System.out.println(s);
 		}
-		*/
+		
+		
+		
 		
 		System.out.println("\nVentas");
 		for(Venta v : Vdao.traerVentas()) {
 			System.out.println(v);
 		}
+		*/
 		
-		
+		System.out.println("\nVentas");
+		for(Venta v : Vdao.traerVentasEntreFechas(new Date("2020/02/01"), new Date("2020/02/13"))) {
+			System.out.println(v);
+		}
 		
 	}
 

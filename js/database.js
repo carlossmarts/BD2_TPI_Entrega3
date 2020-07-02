@@ -41,7 +41,8 @@ db.sucursales.insert({
 					"encargado": {},
 					"direccion": ""
 					});
-db.ventas.insert({	"fecha": "",
+
+db.ventas.insert({	"fecha": "0",
 				    "nroTicket": "",
 				    "formaPago": {},
 				    "totalVenta": 0,
@@ -80,7 +81,7 @@ db.productos.find().forEach( doc => printjson(doc)
 print ("\nsucursales");
 db.sucursales.find().forEach( doc => printjson(doc)
 );
-print ("\nsucursales");
+print ("\nventas");
 db.ventas.find().forEach( doc => printjson(doc)
 );
 
