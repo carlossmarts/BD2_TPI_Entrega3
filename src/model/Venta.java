@@ -12,14 +12,14 @@ public class Venta {
 	private String nroTicket;
 	private FormaPago formaPago;
 	private double totalVenta;
-	private Usuario vendedor;
-	private Usuario cobrador;
-	private Usuario cliente;
+	private Empleado vendedor;
+	private Empleado cobrador;
+	private Cliente cliente;
 	private Sucursal sucursal;
 	private List<ItemVenta> items;
 
-	public Venta(Date fecha, String nroTicket, FormaPago formaPago, Usuario vendedor, Usuario cobrador,
-			Usuario cliente, Sucursal sucursal) {
+	public Venta(Date fecha, String nroTicket, FormaPago formaPago, Empleado vendedor, Empleado cobrador,
+			Cliente cliente, Sucursal sucursal) {
 		this.fecha = fecha;
 		this.nroTicket = nroTicket;
 		this.formaPago = formaPago;
@@ -68,27 +68,27 @@ public class Venta {
 		this.totalVenta = total;
 	}
 
-	public Usuario getVendedor() {
+	public Empleado getVendedor() {
 		return vendedor;
 	}
 
-	public void setVendedor(Usuario vendedor) {
+	public void setVendedor(Empleado vendedor) {
 		this.vendedor = vendedor;
 	}
 
-	public Usuario getCobrador() {
+	public Empleado getCobrador() {
 		return cobrador;
 	}
 
-	public void setCobrador(Usuario cobrador) {
+	public void setCobrador(Empleado cobrador) {
 		this.cobrador = cobrador;
 	}
 
-	public Usuario getCliente() {
+	public Cliente getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Usuario cliente) {
+	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
 
@@ -102,6 +102,10 @@ public class Venta {
 	
 	public boolean agregarItemVenta(ItemVenta item) {
 		return items.add(item);
+	}
+	
+	public List<ItemVenta> getItems() {
+		return items;
 	}
 
 	public String toString() {

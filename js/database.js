@@ -1,5 +1,5 @@
 //conexión a la base de datos
-var db = connect ("127.0.0.1:27017/mongoDB4");
+
 
 db.dropDatabase();
 

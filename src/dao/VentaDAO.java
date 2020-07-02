@@ -1,6 +1,8 @@
 package dao;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -80,7 +82,8 @@ public class VentaDAO {
 				BasicDBObject subquery = new BasicDBObject();
 				
 				String fmenor = "" + menor.getTime();
-				String fmayor = "" + mayor.getTime();
+				//Al dia mayor hay que sumarle un día para que incluya todos los registros de la fecha
+				String fmayor = "" + mayor.getTime() + 86400000;	
 				
 				subquery.put("$gte", fmenor );
 				subquery.put("$lt", fmayor );

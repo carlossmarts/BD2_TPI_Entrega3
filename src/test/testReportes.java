@@ -11,17 +11,18 @@ import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.util.JSON;
 import funciones.Funciones;
+import negocio.Reportes;
 
-public class algo {
+public class testReportes {
 
 	public static void main(String[] args) {
-		Date fecha = new Date("2020/02/03");
-		long f = 1580698800000L;
-		Date fecha2 = new Date(f);
+		//Reportes.reporte1(new Date("2020/02/02"), new Date("2020/02/02"));	
 		
-		System.out.println("fecha: "+ fecha.getTime());
-		System.out.println("fecha2: "+ Funciones.cambiarFormato( fecha2));
+		//Reportes.reporte2(new Date("2020/02/02"), new Date("2020/02/05"));
 		
+		//Reportes.reporte3(new Date("2020/02/02"), new Date("2020/02/05"));
+		
+		Reportes.reporte4(new Date("2020/02/02"), new Date("2020/02/02"));
 	}
 
 }

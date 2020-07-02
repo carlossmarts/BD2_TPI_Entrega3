@@ -121,24 +121,24 @@ public class cargarDatos {
 		
 		//ventas
 		Venta v1 = new Venta(feb2, "0001-0001", ef, e2, e1, c1, s1);
-		//v1.agregarItemVenta(new ItemVenta(p1, 1));
-		//v1.agregarItemVenta(new ItemVenta(p2, 1));
-		//v1.agregarItemVenta(new ItemVenta(p3, 3));
+		v1.agregarItemVenta(new ItemVenta(p1, 1));
+		v1.agregarItemVenta(new ItemVenta(p2, 1));
+		v1.agregarItemVenta(new ItemVenta(p3, 3));
 		v1.calcularTotalVenta();
 		Vdao.agregar(v1);
 	
 		
 		
 		Venta v2 = new Venta(feb2, "0002-0002", ef, e5, e4, c2, s2);
-		//v2.agregarItemVenta(new ItemVenta(p4, 1));
-		//v2.agregarItemVenta(new ItemVenta(p5, 1));
-		//v2.calcularTotalVenta();
+		v2.agregarItemVenta(new ItemVenta(p4, 1));
+		v2.agregarItemVenta(new ItemVenta(p5, 1));
+		v2.calcularTotalVenta();
 		Vdao.agregar(v2);
 		
 		
 		Venta v3 = new Venta(feb2, "0002-0003", ef, e6, e4, c3, s2);
-		//v3.agregarItemVenta(new ItemVenta(p7, 1));
-		//v3.calcularTotalVenta();
+		v3.agregarItemVenta(new ItemVenta(p7, 1));
+		v3.calcularTotalVenta();
 		Vdao.agregar(v3);
 		
 		Venta v4 = new Venta(feb2, "0003-0004", deb, e8, e7, c4, s3);
@@ -221,7 +221,7 @@ public class cargarDatos {
 		v15.calcularTotalVenta();
 		Vdao.agregar(v15);
 		
-		
+		/*
 		Venta v16 = new Venta(feb4, "0002-0016", deb, e6, e4, c5, s2);
 		v16.agregarItemVenta(new ItemVenta(p10, 1));
 		v16.agregarItemVenta(new ItemVenta(p11, 1));
@@ -654,7 +654,7 @@ public class cargarDatos {
 		v90.agregarItemVenta(new ItemVenta(p7,2));
 		v90.calcularTotalVenta();
 		Vdao.agregar(v90);
-		
+		*/
 		
 		
 	}

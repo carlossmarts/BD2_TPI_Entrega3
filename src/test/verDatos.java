@@ -70,7 +70,7 @@ public class verDatos {
 		*/
 		
 		System.out.println("\nVentas");
-		for(Venta v : Vdao.traerVentasEntreFechas(new Date("2020/02/01"), new Date("2020/02/13"))) {
+		for(Venta v : Vdao.traerVentasEntreFechas(new Date("2020/02/01"), new Date("2020/02/06"))) {
 			System.out.println(v);
 		}
 		
