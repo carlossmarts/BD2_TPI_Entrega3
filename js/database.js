@@ -1,5 +1,5 @@
 //conexión a la base de datos
-
+var db = connect("localhost:27017/mongoDB4");
 
 db.dropDatabase();
 

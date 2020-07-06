@@ -18,11 +18,11 @@ public class testReportes {
 	public static void main(String[] args) {
 		//Reportes.reporte1(new Date("2020/02/02"), new Date("2020/02/02"));	
 		
-		//Reportes.reporte2(new Date("2020/02/02"), new Date("2020/02/05"));
+		//Reportes.reporte2(new Date("2020/02/02"), new Date("2020/02/02"));
 		
-		//Reportes.reporte3(new Date("2020/02/02"), new Date("2020/02/05"));
+		//Reportes.reporte3(new Date("2020/02/02"), new Date("2020/02/03"));
 		
-		Reportes.reporte4(new Date("2020/02/02"), new Date("2020/02/02"));
+		Reportes.reporte4(new Date("2020/02/02"), new Date("2020/02/03"));
 	}
 
 }

@@ -83,13 +83,13 @@ public class VentaDAO {
 				
 				String fmenor = "" + menor.getTime();
 				//Al dia mayor hay que sumarle un día para que incluya todos los registros de la fecha
-				String fmayor = "" + mayor.getTime() + 86400000;	
+				String fmayor = "" + mayor.getTime();	
 				
 				subquery.put("$gte", fmenor );
-				subquery.put("$lt", fmayor );
+				subquery.put("$lte", fmayor );
 				query.put("fecha", subquery);
 				//System.out.println(subquery);
-				//System.out.println(query);
+				System.out.println(query);
 				
 				List<Venta> retorno = new ArrayList();
 				DBCursor cursor = col.find(query);
